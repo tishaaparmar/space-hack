@@ -14,13 +14,13 @@ interface ConjunctionRadarProps {
 }
 
 export default function ConjunctionRadar({ satId, items }: ConjunctionRadarProps) {
-    const MAX_RADAR_DIST = 2000; // 2000 km outer ring
+    const MAX_RADAR_DIST = 50; // 50 km outer ring (realistic conjunction scale)
 
-    // Define colors based on risk
+    // Define colors based on PS risk thresholds
     const getColor = (dist: number) => {
-        if (dist < 500.0) return '#ef4444'; // Red
-        if (dist < 1000.0) return '#f59e0b'; // Yellow
-        return '#22c55e'; // Green
+        if (dist < 1.0) return '#ef4444'; // Red — Critical (< 1 km, collision zone is 0.1 km)
+        if (dist < 5.0) return '#f59e0b'; // Yellow — Warning (< 5 km)
+        return '#22c55e'; // Green — Safe (> 5 km)
     };
 
     return (
@@ -70,9 +70,9 @@ export default function ConjunctionRadar({ satId, items }: ConjunctionRadarProps
             </div>
             
             <div className="mt-4 flex gap-4 text-xs font-mono">
-                <div className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-red-500 shadow-[0_0_5px_red]"></span> &lt; 500km</div>
-                <div className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-yellow-500 shadow-[0_0_5px_yellow]"></span> &lt; 1000km</div>
-                <div className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_5px_green]"></span> &gt; 1000km</div>
+                <div className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-red-500 shadow-[0_0_5px_red]"></span> &lt; 1 km</div>
+                <div className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-yellow-500 shadow-[0_0_5px_yellow]"></span> &lt; 5 km</div>
+                <div className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_5px_green]"></span> &gt; 5 km</div>
             </div>
         </div>
     );

@@ -1,0 +1,2 @@
+﻿WARNING: Backend already has 10050 objects!
+Please restart the backend first: Ctrl+C, then 'uvicorn main:app --reload'

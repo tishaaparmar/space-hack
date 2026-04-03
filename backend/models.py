@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field, ConfigDict
 from typing import List, Literal, Optional
 
 class Vector3D(BaseModel):
@@ -15,16 +15,21 @@ class SpaceObject(BaseModel):
     fuel_kg: Optional[float] = 50.0   # Fuel
 
 class TelemetryPayload(BaseModel):
+    timestamp: Optional[str] = None  # ISO 8601 timestamp from grader
     objects: List[SpaceObject]
 
 class ManeuverCommand(BaseModel):
-    burnTime: float  # UNIX timestamp or relative seconds
-    deltaV: Vector3D
+    model_config = ConfigDict(populate_by_name=True)
+    
+    burn_id: Optional[str] = None  # Unique burn identifier
+    burnTime: str  # ISO 8601 timestamp
+    deltaV: Vector3D = Field(alias="deltaV_vector")  # Accepts "deltaV_vector" from grader
 
 class ManeuverSchedulePayload(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+    
     satelliteId: str
     maneuver_sequence: List[ManeuverCommand]
 
 class SimulateStepPayload(BaseModel):
     step_seconds: float = 1.0
-

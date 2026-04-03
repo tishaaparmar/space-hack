@@ -1,0 +1,269 @@
+﻿python : Traceback 
+(most recent call last):
+At line:1 char:1
++ python debug_cola.py 
+2>&1 | Out-File 
+-Encoding utf8 
+debug_out6.txt; t ...
++ ~~~~~~~~~~~~~~~~~~~~~~
+~~~
+    + CategoryInfo      
+        : NotSpecified  
+  : (Traceback (most    
+ recent call last)::    
+String) [], RemoteE    
+xception
+    + FullyQualifiedErr 
+   orId : NativeComman  
+  dError
+ 
+  File "C:\Users\JAY THA
+KKAR\AppData\Local\Progr
+ams\Python\Python312\Lib
+\site-packages\urllib3\c
+onnection.py", line 
+204, in _new_conn
+    sock = connection.cr
+eate_connection(
+           ^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
+  File "C:\Users\JAY THA
+KKAR\AppData\Local\Progr
+ams\Python\Python312\Lib
+\site-packages\urllib3\u
+til\connection.py", 
+line 85, in 
+create_connection
+    raise err
+  File "C:\Users\JAY THA
+KKAR\AppData\Local\Progr
+ams\Python\Python312\Lib
+\site-packages\urllib3\u
+til\connection.py", 
+line 73, in 
+create_connection
+    sock.connect(sa)
+ConnectionRefusedError: 
+[WinError 10061] No 
+connection could be 
+made because the target 
+machine actively 
+refused it
+
+The above exception was 
+the direct cause of the 
+following exception:
+
+Traceback (most recent 
+call last):
+  File "C:\Users\JAY THA
+KKAR\AppData\Local\Progr
+ams\Python\Python312\Lib
+\site-packages\urllib3\c
+onnectionpool.py", line 
+787, in urlopen
+    response = 
+self._make_request(
+               
+^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JAY THA
+KKAR\AppData\Local\Progr
+ams\Python\Python312\Lib
+\site-packages\urllib3\c
+onnectionpool.py", line 
+493, in _make_request
+    conn.request(
+  File "C:\Users\JAY THA
+KKAR\AppData\Local\Progr
+ams\Python\Python312\Lib
+\site-packages\urllib3\c
+onnection.py", line 
+500, in request
+    self.endheaders()
+  File "C:\Users\JAY THA
+KKAR\AppData\Local\Progr
+ams\Python\Python312\Lib
+\http\client.py", line 
+1333, in endheaders
+    self._send_output(me
+ssage_body, encode_chunk
+ed=encode_chunked)
+  File "C:\Users\JAY THA
+KKAR\AppData\Local\Progr
+ams\Python\Python312\Lib
+\http\client.py", line 
+1093, in _send_output
+    self.send(msg)
+  File "C:\Users\JAY THA
+KKAR\AppData\Local\Progr
+ams\Python\Python312\Lib
+\http\client.py", line 
+1037, in send
+    self.connect()
+  File "C:\Users\JAY THA
+KKAR\AppData\Local\Progr
+ams\Python\Python312\Lib
+\site-packages\urllib3\c
+onnection.py", line 
+331, in connect
+    self.sock = 
+self._new_conn()
+                
+^^^^^^^^^^^^^^^^
+  File "C:\Users\JAY THA
+KKAR\AppData\Local\Progr
+ams\Python\Python312\Lib
+\site-packages\urllib3\c
+onnection.py", line 
+219, in _new_conn
+    raise 
+NewConnectionError(
+urllib3.exceptions.NewCo
+nnectionError: HTTPConne
+ction(host='localhost', 
+port=8000): Failed to 
+establish a new 
+connection: [WinError 
+10061] No connection 
+could be made because 
+the target machine 
+actively refused it
+
+The above exception was 
+the direct cause of the 
+following exception:
+
+Traceback (most recent 
+call last):
+  File "C:\Users\JAY THA
+KKAR\AppData\Local\Progr
+ams\Python\Python312\Lib
+\site-packages\requests\
+adapters.py", line 486, 
+in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\JAY THA
+KKAR\AppData\Local\Progr
+ams\Python\Python312\Lib
+\site-packages\urllib3\c
+onnectionpool.py", line 
+841, in urlopen
+    retries = 
+retries.increment(
+              
+^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JAY THA
+KKAR\AppData\Local\Progr
+ams\Python\Python312\Lib
+\site-packages\urllib3\u
+til\retry.py", line 
+535, in increment
+    raise 
+MaxRetryError(_pool, 
+url, reason) from 
+reason  # type: 
+ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^
+urllib3.exceptions.MaxRe
+tryError: HTTPConnection
+Pool(host='localhost', 
+port=8000): Max retries 
+exceeded with url: / 
+(Caused by NewConnection
+Error("HTTPConnection(ho
+st='localhost', 
+port=8000): Failed to 
+establish a new 
+connection: [WinError 
+10061] No connection 
+could be made because 
+the target machine 
+actively refused it"))
+
+During handling of the 
+above exception, 
+another exception 
+occurred:
+
+Traceback (most recent 
+call last):
+  File "C:\Projects\Hack
+athons\space-hack\space-
+hack\debug_cola.py", 
+line 7, in <module>
+    r = 
+requests.get(f"{BASE}/")
+        
+^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JAY THA
+KKAR\AppData\Local\Progr
+ams\Python\Python312\Lib
+\site-packages\requests\
+api.py", line 73, in get
+    return 
+request("get", url, 
+params=params, **kwargs)
+           ^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^
+  File "C:\Users\JAY THA
+KKAR\AppData\Local\Progr
+ams\Python\Python312\Lib
+\site-packages\requests\
+api.py", line 59, in 
+request
+    return session.reque
+st(method=method, 
+url=url, **kwargs)
+           ^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
+  File "C:\Users\JAY THA
+KKAR\AppData\Local\Progr
+ams\Python\Python312\Lib
+\site-packages\requests\
+sessions.py", line 589, 
+in request
+    resp = 
+self.send(prep, 
+**send_kwargs)
+           ^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
+  File "C:\Users\JAY THA
+KKAR\AppData\Local\Progr
+ams\Python\Python312\Lib
+\site-packages\requests\
+sessions.py", line 703, 
+in send
+    r = 
+adapter.send(request, 
+**kwargs)
+        ^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
+  File "C:\Users\JAY THA
+KKAR\AppData\Local\Progr
+ams\Python\Python312\Lib
+\site-packages\requests\
+adapters.py", line 519, 
+in send
+    raise 
+ConnectionError(e, 
+request=request)
+requests.exceptions.Conn
+ectionError: HTTPConnect
+ionPool(host='localhost'
+, port=8000): Max 
+retries exceeded with 
+url: / (Caused by NewCon
+nectionError("HTTPConnec
+tion(host='localhost', 
+port=8000): Failed to 
+establish a new 
+connection: [WinError 
+10061] No connection 
+could be made because 
+the target machine 
+actively refused it"))

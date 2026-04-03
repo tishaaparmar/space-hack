@@ -1,0 +1,9 @@
+﻿Running 1 step (120s)...
+Step result: col=0, man=0
+Maneuvers in log: 1
+  SAT-F9C93913 vs DEB-THR-003: dv=0.416m/s reason=Predictive COLA (TCA-based)
+
+Fleet stats: {"total_dv_consumed_ms": 0.41601065008370336, "fleet_uptime_pct": 98.55813953488372, "pending_recovery_burns": 0}
+
+After 6 total steps - Maneuvers: 1
+  SAT-F9C93913 vs DEB-THR-003: dv=0.416m/s type=EVASION

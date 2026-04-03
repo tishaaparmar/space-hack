@@ -1,0 +1,38 @@
+﻿=== Seeding simulate_data2.py ===
+Generating 10,050 objects (50 sats + 10,000 debris + 8 collision threats)...
+  DEB-THR-001 -> SAT-CB476023: ahead=38km, closing=27m/s, TCA=1420s, miss=50m
+  DEB-THR-002 -> SAT-AAB5CC94: ahead=26km, closing=25m/s, TCA=1052s, miss=50m
+  DEB-THR-003 -> SAT-1278EFD9: ahead=30km, closing=26m/s, TCA=1138s, miss=50m
+  DEB-THR-004 -> SAT-78C325B8: ahead=32km, closing=37m/s, TCA=878s, miss=50m
+  DEB-THR-005 -> SAT-5C852006: ahead=20km, closing=32m/s, TCA=624s, miss=50m
+  DEB-THR-006 -> SAT-2CC7726F: ahead=25km, closing=23m/s, TCA=1101s, miss=50m
+  DEB-THR-007 -> SAT-F761455C: ahead=38km, closing=47m/s, TCA=806s, miss=50m
+  DEB-THR-008 -> SAT-63CA974A: ahead=28km, closing=48m/s, TCA=589s, miss=50m
+
+Sending 10050 objects to backend...
+Response: {'status': 'ACK', 'processed_count': 10050, 'active_cdm_warnings': 0}
+
+Done! Open http://localhost:3000 and click RUN SIMULATION.
+Maneuvers should appear within the first 1-2 steps.
+
+=== Running simulation steps ===
+  Step 1: t=2026-03-12T08:06:00.000Z | col=0 | man=1 << 1 MANEUVER(S)!
+  Step 2: t=2026-03-12T08:12:00.000Z | col=0 | man=0
+  Step 3: t=2026-03-12T08:18:00.000Z | col=0 | man=0
+  Step 4: t=2026-03-12T08:26:00.000Z | col=0 | man=0
+  Step 5: t=2026-03-12T08:32:00.000Z | col=0 | man=0
+  Step 6: t=2026-03-12T08:38:00.000Z | col=0 | man=0
+  Step 7: t=2026-03-12T08:44:00.000Z | col=0 | man=0
+  Step 8: t=2026-03-12T08:50:00.000Z | col=0 | man=0
+  Step 9: t=2026-03-12T08:56:00.000Z | col=0 | man=0
+  Step 10: t=2026-03-12T09:02:00.000Z | col=0 | man=0
+
+=== RESULTS ===
+Total maneuvers: 2
+Total Dv consumed: 5.214 m/s
+Fleet uptime: 98.8%
+Pending recovery burns: 0
+
+Maneuver details:
+  EVASION  | SAT-1278EFD9         vs DEB-THR-003     | dv=4.974m/s | fuel=49.1kg
+  EVASION  | SAT-507571F5         vs DEB-FB3714C8    | dv=0.240m/s | fuel=50.0kg

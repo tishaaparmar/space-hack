@@ -1,0 +1,55 @@
+﻿============================================================
+  COLLISION TEST v2: Slow-approach co-orbital debris
+============================================================
+  Placed DEB-THREAT-001 ~50m from SAT-ALPHA-01
+  Placed DEB-THREAT-002 ~50m from SAT-ALPHA-03
+  Placed DEB-THREAT-003 ~50m from SAT-ALPHA-07
+
+[1] Ingesting 113 objects...
+    CDM Warnings on ingest: 3
+
+[2] Running simulation steps...
+    t=2026-03-12T08:04:30.000Z | col=0 | man=0
+    t=2026-03-12T08:11:00.000Z | col=0 | man=0
+    t=2026-03-12T08:19:30.000Z | col=0 | man=0
+    t=2026-03-12T08:28:00.000Z | col=0 | man=0
+    t=2026-03-12T08:36:30.000Z | col=0 | man=0
+    t=2026-03-12T08:41:00.000Z | col=0 | man=0
+    t=2026-03-12T08:41:30.000Z | col=0 | man=0
+    t=2026-03-12T08:42:00.000Z | col=0 | man=0
+    t=2026-03-12T08:42:30.000Z | col=0 | man=0
+    t=2026-03-12T08:43:00.000Z | col=0 | man=0
+
+[3] Fetching snapshot...
+
+============================================================
+  RESULTS
+============================================================
+  Sim Time:         2026-03-12T08:43:00.000Z
+  Total collisions: 0
+  Total maneuvers:  0
+  Maneuver log:     0 entries
+
+  ALPHA FLEET FUEL STATUS:
+  ID                   Fuel       Bar
+  --------------------------------------------------
+  SAT-ALPHA-06         8.00       [####..........................] LOW!
+  SAT-ALPHA-05         15.00      [#########.....................] 
+  SAT-ALPHA-10         20.00      [############..................] 
+  SAT-ALPHA-04         25.00      [###############...............] 
+  SAT-ALPHA-09         30.00      [##################............] 
+  SAT-ALPHA-08         35.00      [#####################.........] 
+  SAT-ALPHA-03         38.00      [######################........] 
+  SAT-ALPHA-07         42.00      [#########################.....] 
+  SAT-ALPHA-02         45.00      [###########################...] 
+  SAT-ALPHA-01         50.00      [##############################] 
+
+  No maneuvers were executed.
+  (Debris diverged too fast for the step-based collision check)
+
+============================================================
+  Now open http://localhost:3000 to verify visually!
+  - Check fuel gauges (varying levels)
+  - Check conjunction radar for nearby debris
+  - Check maneuver lines on the ground track map
+============================================================

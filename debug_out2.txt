@@ -1,0 +1,17 @@
+﻿Current state: 100 sats, 19992 debris, 1 maneuvers
+
+--- Step 1 (120s) ---
+Result: col=0, man=0
+  >> EVASION: SAT-F9C93913 vs DEB-THR-003 | dv=0.416m/s
+  >> EVASION: SAT-16C95141 vs DEB-THR-003 | dv=0.416m/s
+
+--- Step 2 (120s) ---
+Result: col=0, man=0
+
+--- Step 3 (120s) ---
+Result: col=0, man=0
+
+Final: 2 total maneuvers
+  EVASION: SAT-F9C93913 vs DEB-THR-003 | dv=0.416m/s | fuel=49.9kg
+  EVASION: SAT-16C95141 vs DEB-THR-003 | dv=0.416m/s | fuel=49.9kg
+Fleet stats: {"total_dv_consumed_ms": 0.8320213001674067, "fleet_uptime_pct": 95.42372881355932, "pending_recovery_burns": 1}

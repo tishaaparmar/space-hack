@@ -1,0 +1,58 @@
+﻿============================================================
+  COLLISION TEST v2: Slow-approach co-orbital debris
+============================================================
+  Placed DEB-THREAT-001 ~50m from SAT-ALPHA-01
+  Placed DEB-THREAT-002 ~50m from SAT-ALPHA-03
+  Placed DEB-THREAT-003 ~50m from SAT-ALPHA-07
+
+[1] Ingesting 113 objects...
+    CDM Warnings on ingest: 3
+
+[2] Running simulation steps...
+    t=2026-03-12T08:00:30.000Z | col=3 | man=2 << COLLISION! << MANEUVER!
+    t=2026-03-12T08:01:00.000Z | col=1 | man=0 << COLLISION!
+    t=2026-03-12T08:01:30.000Z | col=1 | man=0 << COLLISION!
+    t=2026-03-12T08:02:00.000Z | col=1 | man=0 << COLLISION!
+    t=2026-03-12T08:02:30.000Z | col=0 | man=0
+    t=2026-03-12T08:03:00.000Z | col=0 | man=0
+    t=2026-03-12T08:03:30.000Z | col=0 | man=0
+    t=2026-03-12T08:04:00.000Z | col=0 | man=0
+    t=2026-03-12T08:04:30.000Z | col=0 | man=0
+    t=2026-03-12T08:05:00.000Z | col=0 | man=0
+
+[3] Fetching snapshot...
+
+============================================================
+  RESULTS
+============================================================
+  Sim Time:         2026-03-12T08:05:00.000Z
+  Total collisions: 6
+  Total maneuvers:  2
+  Maneuver log:     2 entries
+
+  ALPHA FLEET FUEL STATUS:
+  ID                   Fuel       Bar
+  --------------------------------------------------
+  SAT-ALPHA-06         8.00       [####..........................] LOW!
+  SAT-ALPHA-05         15.00      [#########.....................] 
+  SAT-ALPHA-10         20.00      [############..................] 
+  SAT-ALPHA-09         30.00      [##################............] 
+  SAT-ALPHA-08         35.00      [#####################.........] 
+  SAT-ALPHA-03         35.26      [#####################.........] 
+  SAT-ALPHA-07         42.00      [#########################.....] 
+  SAT-ALPHA-02         45.00      [###########################...] 
+  SAT-ALPHA-01         47.20      [############################..] 
+  SAT-ALPHA-04         50.00      [##############################] 
+
+  MANEUVER LOG:
+  >> SAT-ALPHA-01 avoided DEB-THREAT-001 | dv=15.00 m/s
+     before=(28.5, 79.4) -> after=(28.1, 88.2)
+  >> SAT-ALPHA-03 avoided DEB-THREAT-002 | dv=15.00 m/s
+     before=(35.4, -114.5) -> after=(34.8, -105.1)
+
+============================================================
+  Now open http://localhost:3000 to verify visually!
+  - Check fuel gauges (varying levels)
+  - Check conjunction radar for nearby debris
+  - Check maneuver lines on the ground track map
+============================================================

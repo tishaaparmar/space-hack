@@ -1,0 +1,39 @@
+﻿======================================================================
+  TCA-BASED COLA TEST: Debris approaching from ~20-30 km out
+======================================================================
+  DEB-XING-001 -> SAT-TCA-01: offset=25.0km, TCAΓëê500s, missΓëê0.013km
+  DEB-XING-002 -> SAT-TCA-02: offset=25.0km, TCAΓëê500s, missΓëê0.013km
+  DEB-XING-003 -> SAT-TCA-03: offset=25.0km, TCAΓëê500s, missΓëê0.013km
+
+[1] Ingesting 58 objects...
+    Status: ACK | CDM warnings: 0
+
+[2] Running 20 x 30s steps (10 minutes of sim time)...
+    Step  1: t=2026-03-12T08:00:30.000Z | col=0 | man=3 << MANEUVER!
+
+[3] Fetching snapshot...
+
+======================================================================
+  RESULTS (TCA-BASED ALGORITHM)
+======================================================================
+  Total collisions detected: 0
+  Total maneuvers executed:  3
+  Total ╬öv consumed:         6.56 m/s
+  Fleet uptime:              100.0%
+
+  MANEUVER DETAILS:
+    >> SAT-TCA-01 vs DEB-XING-001 | ╬öv=2.188 m/s | type=EVASION | reason=Predictive COLA (TCA-based)
+       fuel remaining: 49.5910458550029 kg
+    >> SAT-TCA-02 vs DEB-XING-002 | ╬öv=2.188 m/s | type=EVASION | reason=Predictive COLA (TCA-based)
+       fuel remaining: 44.59479732962552 kg
+    >> SAT-TCA-03 vs DEB-XING-003 | ╬öv=2.188 m/s | type=EVASION | reason=Predictive COLA (TCA-based)
+       fuel remaining: 37.59994718875066 kg
+
+  FUEL STATUS:
+    SAT-TCA-03      37.60 kg [##################.......] NOMINAL
+    SAT-TCA-04      40.00 kg [####################.....] NOMINAL
+    SAT-TCA-05      42.00 kg [#####################....] NOMINAL
+    SAT-TCA-02      44.59 kg [######################...] NOMINAL
+    SAT-TCA-01      49.59 kg [########################.] NOMINAL
+
+======================================================================
